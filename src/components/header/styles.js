@@ -31,6 +31,9 @@ export const Section = styled.div`
     @media (max-width: 1000px) {
       gap: 70px;
     }
+    @media (max-width: 550px) {
+      display: block;
+    }
   }
 
   div {
@@ -45,7 +48,7 @@ export const Section = styled.div`
       color: white;
 
       @media (max-width: 700px) {
-        font-size: 10px;
+        font-size: 11px;
         margin: 5px 0;
       }
     }
@@ -117,7 +120,7 @@ export const NavMenu = styled.nav`
   @media (max-width: 1000px) {
     flex-direction: column;
     position: absolute;
-    top: 156px;
+    top: 150px;
     right: 0;
     background-color: #011d4c;
     width: 100%;
