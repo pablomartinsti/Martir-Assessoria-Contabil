@@ -1,4 +1,12 @@
-import { Container, Section, Article } from './styles';
+import React, { useState } from 'react';
+import {
+  Container,
+  Section,
+  Article,
+  BurgerMenu,
+  NavMenu,
+  NavLink,
+} from './styles';
 import Logo from '../../assets/Logo.png';
 import phone from '../../assets/phone.png';
 import email from '../../assets/email.png';
@@ -7,6 +15,12 @@ import whatsapp from '../../assets/whatsapp.png';
 import instagram from '../../assets/instagram.png';
 
 function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <Container>
       <Section>
@@ -32,14 +46,12 @@ function Header() {
             href="https://www.instagram.com/martirassessoria/"
             target='"_blank'
           >
-            {' '}
             <img src={linkedin} alt="imagem linkedin" />
           </a>
           <a
             href="https://www.instagram.com/martirassessoria/"
             target='"_blank'
           >
-            {' '}
             <img src={instagram} alt="imagem instagram" />
           </a>
           <a
@@ -51,14 +63,19 @@ function Header() {
         </div>
       </Section>
       <Article>
-        <img src={Logo} alt="Logo" />
-        <nav>
-          <a href="/">HOME</a>
-          <a href="/Sobre">SOBRE</a>
-          <a href="/Serviço">SERVIÇOS</a>
-          <a href="/Blog">BLOG</a>
-          <a href="/Contato">FALE CONOSCO</a>
-        </nav>
+        <div className="menu">
+          <img src={Logo} alt="Logo" />
+          <BurgerMenu onClick={toggleMenu}>
+            &#9776; {/* Ícone do menu hambúrguer */}
+          </BurgerMenu>
+          <NavMenu open={menuOpen}>
+            <NavLink href="/">HOME</NavLink>
+            <NavLink href="/Sobre">SOBRE</NavLink>
+            <NavLink href="/Serviço">SERVIÇOS</NavLink>
+            <NavLink href="/Blog">BLOG</NavLink>
+            <NavLink href="/Contato">FALE CONOSCO</NavLink>
+          </NavMenu>
+        </div>
       </Article>
     </Container>
   );

@@ -11,7 +11,7 @@ export const Start = styled.div`
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh + 157px);
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,14 +19,14 @@ export const Start = styled.div`
   transform: translateY(-100px);
 
   section {
-    height: 100%;
     width: 1200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 250px;
+
     .title-1 {
       font-size: 60px;
       transform: translateX(-700px);
