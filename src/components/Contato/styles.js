@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../../assets/contato.jpg";
+import img from "../../assets/contato.webp";
 export const Container = styled.div`
   position: relative;
   width: 100%;

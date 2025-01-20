@@ -3,7 +3,7 @@ import ImportContactsIcon from "@mui/icons-material/ImportContacts";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import LocalAtmIcon from "@mui/icons-material/LocalAtm";
 import BusinessIcon from "@mui/icons-material/Business";
-import foto from "../../assets/soluções.jpg";
+import foto from "../../assets/soluções.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 

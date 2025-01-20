@@ -3,7 +3,7 @@ import LockResetIcon from "@mui/icons-material/LockReset";
 import LanguageIcon from "@mui/icons-material/Language";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import foto from "../../assets/sobre.jpg";
+import foto from "../../assets/sobre.webp";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 

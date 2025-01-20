@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "../../assets/dicas.jpg";
+import img from "../../assets/dicas.webp";
 
 export const Container = styled.div`
   position: relative;

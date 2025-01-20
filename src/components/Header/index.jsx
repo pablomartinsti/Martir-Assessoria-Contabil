@@ -2,7 +2,7 @@ import { Container } from "./styles";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
-import Logo from "../../assets/Logo.png";
+import Logo from "../../assets/Logo.webp";
 
 function Header() {
   return (

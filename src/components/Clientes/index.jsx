@@ -4,8 +4,8 @@ import StarHalfIcon from "@mui/icons-material/StarHalf";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-import joao from "../../assets/joao.png";
-import maria from "../../assets/maria.png";
+import joao from "../../assets/joao.webp";
+import maria from "../../assets/maria.webp";
 
 function Clientes() {
   const ref = useRef(null);
