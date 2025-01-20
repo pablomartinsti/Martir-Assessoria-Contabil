@@ -1,10 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  @media (max-width: 1182px) {
-    display: none;
-  }
-
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -25,6 +21,12 @@ export const Container = styled.div`
     border: none;
     font-size: 2.5rem;
     cursor: pointer;
+
+    @media (max-width: 480px) {
+      right: 1rem;
+      font-size: 2rem;
+      top: 0;
+    }
   }
   .modal-content {
     background-color: #ffffff;
@@ -39,18 +41,15 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
 
+    @media (max-width: 480px) {
+      max-width: 350px;
+    }
     h2 {
       color: #000;
     }
     p {
       margin: 10px 0;
       color: rgba(0, 0, 0, 0.57);
-    }
-
-    @media (max-width: 768px) {
-    }
-
-    @media (max-width: 480px) {
     }
   }
 

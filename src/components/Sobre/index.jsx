@@ -8,8 +8,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 function Sobre() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: true });
+  const refDiv = useRef(null); // Ref para o motion.div
+  const refImg = useRef(null); // Ref para o motion.img
+  const isInViewDiv = useInView(refDiv, { triggerOnce: true });
+  const isInViewImg = useInView(refImg, { triggerOnce: true });
 
   const animationVariants = {
     hidden: { y: 100, opacity: 0 },
@@ -21,14 +23,14 @@ function Sobre() {
       <Section>
         <Main>
           <motion.div
-            ref={ref}
+            ref={refDiv}
             variants={animationVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewDiv ? "visible" : "hidden"}
             transition={{ duration: 1 }}
           >
             <div className="box-conteudo">
-              <h1>Por Que Escolher Martir Assessoria Contabil ?</h1>
+              <h1>Por Que Escolher Martir Assessoria Contábil?</h1>
               <div className="section">
                 <div className="conteudo">
                   <div className="icon">
@@ -51,10 +53,7 @@ function Sobre() {
                     />
                   </div>
                   <div>
-                    <h2>
-                      Atendimento em Todo o{"\n"}
-                      Brasil
-                    </h2>
+                    <h2>Atendimento em Todo o Brasil</h2>
                     <p>
                       Seja presencial ou online, estamos prontos para ajudá-lo
                       onde você estiver.
@@ -94,10 +93,10 @@ function Sobre() {
           <motion.img
             src={foto}
             alt="foto da equipe trabalhando"
-            ref={ref}
+            ref={refImg}
             variants={animationVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewImg ? "visible" : "hidden"}
             transition={{ duration: 1, delay: 0.5 }}
           />
         </Main>

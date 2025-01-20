@@ -42,11 +42,11 @@ export const Main = styled.div`
     }
   }
   img {
-    width: 35%;
+    width: 40%;
     height: 100vh;
 
     @media (max-width: 1180px) {
-      width: 100vw;
+      width: 97vw;
       height: auto;
     }
   }

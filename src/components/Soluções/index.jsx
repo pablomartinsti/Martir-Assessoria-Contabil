@@ -8,8 +8,11 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 function Soluções() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { triggerOnce: true });
+  // Separando referências para `motion.div` e `motion.img`
+  const refDiv = useRef(null);
+  const refImg = useRef(null);
+  const isInViewDiv = useInView(refDiv, { triggerOnce: true });
+  const isInViewImg = useInView(refImg, { triggerOnce: true });
 
   const animationVariants = {
     hidden: { y: 100, opacity: 0 },
@@ -20,11 +23,12 @@ function Soluções() {
     <Container>
       <Section>
         <Main>
+          {/* Animação para o conteúdo da seção */}
           <motion.div
-            ref={ref}
+            ref={refDiv}
             variants={animationVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewDiv ? "visible" : "hidden"}
             transition={{ duration: 1 }}
           >
             <div className="box-conteudo">
@@ -101,13 +105,14 @@ function Soluções() {
             </div>
           </motion.div>
 
+          {/* Animação para a imagem */}
           <motion.img
             src={foto}
             alt="foto da equipe trabalhando"
-            ref={ref}
+            ref={refImg}
             variants={animationVariants}
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={isInViewImg ? "visible" : "hidden"}
             transition={{ duration: 1, delay: 0.5 }}
           />
         </Main>

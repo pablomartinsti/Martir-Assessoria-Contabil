@@ -37,6 +37,7 @@ export const Main = styled.div`
       font-size: 2rem;
       text-align: center;
       white-space: normal;
+      padding-left: 0rem;
     }
 
     @media (max-width: 768px) {
@@ -48,11 +49,11 @@ export const Main = styled.div`
     }
   }
   img {
-    width: 35%;
+    width: 40%;
     height: 100vh;
 
     @media (max-width: 1180px) {
-      width: 100vw;
+      width: 97vw;
       height: auto;
     }
   }
