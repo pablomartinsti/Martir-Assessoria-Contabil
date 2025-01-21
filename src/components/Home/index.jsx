@@ -3,10 +3,12 @@ import Button from "../Button";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const form = useRef(null);
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,8 +23,12 @@ function Home() {
       .then(
         (result) => {
           console.log(result.text);
-          setMessage("Mensagem enviada com sucesso!");
+
           form.current.reset();
+
+          setTimeout(() => {
+            navigate("/obrigado");
+          }, 2000);
         },
         (error) => {
           console.log(error.text);
