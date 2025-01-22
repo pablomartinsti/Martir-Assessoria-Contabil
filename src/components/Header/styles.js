@@ -8,9 +8,8 @@ export const Container = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: #011d4c;
   z-index: 10;
-  border-bottom: 2px solid #fff;
 
   @media (max-width: 480px) {
     padding: 0.4rem 2rem;
